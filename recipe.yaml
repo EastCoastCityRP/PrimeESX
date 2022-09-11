@@ -22,7 +22,6 @@ tasks:
     - action: download_github
     src: https://github.com/tabarra/PlumeESX-recipe/esx_policemdt-master
     ref: main
-    subpath: resources
     dest: ./resources/esx_policemdt-master
 
 
