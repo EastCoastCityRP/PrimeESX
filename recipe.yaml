@@ -2,8 +2,10 @@ $engine: 9
 $onesync: legacy
 name: PrimeESX
 version: 4.1.0
-author: Prime Mods1
-description: A full featured and highly configurable yet lightweight ESX Legacy base that can be easily extended. 
+author: Prime_Mods
+description: Prime ESX is a New ESX Framework. 
+
+ 
 
 tasks:
   # Download default CFX resources
@@ -13,7 +15,7 @@ tasks:
     subpath: resources
     dest: ./resources/[cfx-default]
   
-  # Download and prepare server.cfg / loadingscreen / esx_policemdt-master / database
+  # Download and prepare server.cfg / loadingscreen / database
   - action: download_github
     src: https://github.com/tabarra/PlumeESX-recipe
     ref: main
@@ -73,10 +75,15 @@ tasks:
     dest: ./resources/EasyAdmin
 
   - action: download_github
+    src: https://github.com/thelindat/mdt
+    ref: 0c804de3cd497d70d8ae76bf1699d76d4c9d94fc
+    dest: ./resources/mdt
+
+  - action: download_github
     src: https://github.com/DevTestingPizza/vSync
     ref: 65f0e3cdd5692b619985a7df6297ffca7db41525
     dest: ./tmp/vSync
-    
+
   - action: move_path
     src: ./tmp/vSync/vSync
     dest: ./resources/vSync
@@ -151,7 +158,6 @@ tasks:
       Name = "INPUT_REPLAY_START_STOP_RECORDING_SECONDARY", -- Control name"
     replace: | 
       Name = "INPUT_SELECT_CHARACTER_MICHAEL", -- Control name"
-
   - action: replace_string
     file: ./resources/rp-radio/config.lua
     search: 'Key = 289, -- F2'
