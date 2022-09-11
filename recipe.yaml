@@ -13,11 +13,17 @@ tasks:
     subpath: resources
     dest: ./resources/[cfx-default]
   
-  # Download and prepare server.cfg / loadingscreen / database
+  # Download and prepare server.cfg / loadingscreen / esx_policemdt-master / database
   - action: download_github
     src: https://github.com/tabarra/PlumeESX-recipe
     ref: main
     dest: ./tmp/plume_esx
+    
+     - action: download_github
+    src: https://github.com/tabarra/PlumeESX-recipe/esx_policemdt-master
+    ref: main
+    dest: ./tmp/plume_esx
+
 
   - action: move_path
     src: ./tmp/plume_esx/server.cfg
