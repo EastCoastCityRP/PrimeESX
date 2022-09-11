@@ -1,8 +1,8 @@
-$engine: 
+$engine: 9
 $onesync: legacy
-name: PlumeESXLegacy
+name: PrimeESX
 version: 4.1.0
-author: Tabarra & SaltySea
+author: Prime Mods1
 description: A full featured and highly configurable yet lightweight ESX Legacy base that can be easily extended. 
 
 tasks:
