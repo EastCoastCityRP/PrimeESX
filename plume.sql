@@ -329,38 +329,46 @@ INSERT INTO `licenses` (`type`, `label`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mdt_reports`
+-- Table structure for table `arrests_list`
 --
 
-CREATE TABLE `mdt_reports` (
-  `id` int(11) NOT NULL,
-  `char_id` int(11) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `incident` longtext DEFAULT NULL,
-  `charges` longtext DEFAULT NULL,
-  `author` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `date` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `arrests_list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `json_data` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mdt_warrants`
+-- Table structure for table `bolos_list`
 --
 
-CREATE TABLE `mdt_warrants` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `char_id` int(11) DEFAULT NULL,
-  `report_id` int(11) DEFAULT NULL,
-  `report_title` varchar(255) DEFAULT NULL,
-  `charges` longtext DEFAULT NULL,
-  `date` varchar(255) DEFAULT NULL,
-  `expire` varchar(255) DEFAULT NULL,
-  `notes` varchar(255) DEFAULT NULL,
-  `author` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `bolos_list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `json_data` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `warrants_list`
+--
+
+CREATE TABLE IF NOT EXISTS `warrants_list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `json_data` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 -- --------------------------------------------------------
 
