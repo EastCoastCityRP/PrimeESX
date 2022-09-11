@@ -85,13 +85,8 @@ tasks:
     
   - action: download_file
     url: https://github.com/EastCoastCityRP/PrimeESX/tree/main/esx_policemdt-master
-  - action: move_path
     src: ./tmp/resources/esx_policemdt-master
     dest: ./resources/
-  - action: unzip
-    src: ./tmp/esx_policemdt-master
-    dest: ./tmp/resources/
-    
     
   - action: move_path
     src: ./tmp/vSync/vSync
