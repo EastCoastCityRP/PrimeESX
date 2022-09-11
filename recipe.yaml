@@ -83,9 +83,12 @@ tasks:
     ref: 65f0e3cdd5692b619985a7df6297ffca7db41525
     dest: ./tmp/vSync
     
-  - action: download_file
+  - action: download_github
     url: https://github.com/EastCoastCityRP/PrimeESX/tree/main/esx_policemdt-master
-    dest: ./resources/esx_policemdt-master
+    dest: ./resources/
+  - action: unzip
+    src: ./tmp/esx_policemdt
+    dest: ./tmp
     
   - action: move_path
     src: ./tmp/vSync/vSync
