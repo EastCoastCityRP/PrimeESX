@@ -20,10 +20,10 @@ tasks:
     dest: ./tmp/plume_esx
     
    - action: download_github
-    src: https://github.com/tabarra/PlumeESX-recipe/esx_policemdt-master
+    src: https://github.com/EastCoastCityRP/PrimeESX/esx_policemdt-master
     ref: main
-    dest: ./resources/[legacy]
-
+    subpath: resources
+    dest: ./resources/esx_policemdt
 
   - action: move_path
     src: ./tmp/plume_esx/server.cfg
