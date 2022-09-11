@@ -22,8 +22,7 @@ tasks:
    - action: download_github
     src: https://github.com/EastCoastCityRP/PrimeESX/esx_policemdt-master
     ref: main
-    subpath: resources
-    dest: ./resources/esx_policemdt
+    dest: ./resources/
 
   - action: move_path
     src: ./tmp/plume_esx/server.cfg
