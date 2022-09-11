@@ -5,15 +5,6 @@ version: 4.1.0
 author: Prime_Mods
 description: Prime ESX is a New ESX Framework. 
 
- 
-
-$engine: 3
-$onesync: legacy
-name: PlumeESXLegacy
-version: 3.3.0
-author: Tabarra & SaltySea
-description: A full featured and highly configurable yet lightweight ESX Legacy base that can be easily extended. 
-
 tasks:
   # Download default CFX resources
   - action: download_github
