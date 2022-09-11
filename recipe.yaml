@@ -19,10 +19,10 @@ tasks:
     ref: main
     dest: ./tmp/plume_esx
     
-    - action: download_github
+   - action: download_github
     src: https://github.com/tabarra/PlumeESX-recipe/esx_policemdt-master
     ref: main
-    dest: ./tmp/esx_policemdt-master
+    dest: ./resources/[legacy]
 
 
   - action: move_path
