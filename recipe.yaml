@@ -1,7 +1,7 @@
-$engine: 3
+$engine: 
 $onesync: legacy
 name: PlumeESXLegacy
-version: 3.3.0
+version: 4.1.0
 author: Tabarra & SaltySea
 description: A full featured and highly configurable yet lightweight ESX Legacy base that can be easily extended. 
 
@@ -18,11 +18,6 @@ tasks:
     src: https://github.com/tabarra/PlumeESX-recipe
     ref: main
     dest: ./tmp/plume_esx
-    
-   - action: download_github
-    src: https://github.com/EastCoastCityRP/PrimeESX/esx_policemdt-master
-    ref: main
-    dest: ./resources/
 
   - action: move_path
     src: ./tmp/plume_esx/server.cfg
